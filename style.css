@@ -2,14 +2,17 @@ html, body, div {
 	padding: 0;
 	margin: 0;
 	border: 0;
+	font-family: Arial, sans-serif;
 }
 
 .record {
 	position: relative;
 	width: 300px;
 	height: 300px;
-	
 	margin: 50px auto 0;
+	
+	-webkit-transition: all 1s ease-in-out;
+
 }
 
 .record .front {
@@ -17,35 +20,99 @@ html, body, div {
 	
 	width: 300px;
 	height: 300px;
-	
+
 	position: absolute;
 	top: 0;
 	left: 0;
 	
-	-webkit-animation: coverflip1 1s 1;
+	opacity: 1;
+	
+	-webkit-animation-name: coverflip-front;
+
 }
 
-.record .back {
-	visibility: hidden;
-	
+.record .back {	
 	width: 300px;
 	height: 300px;
 	
 	position: absolute;
 	top: 0;
 	left: 0;
+	
+	opacity: 0;
+	
+	-webkit-animation-name: coverflip-back;
+
 }
 
-@-webkit-keyframes coverflip1 {
-	0%
+.record:hover .front {
+	-webkit-animation-name: coverflip-front;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-fill-mode: both;
+}
+
+.record:hover .back {
+	-webkit-animation-name: coverflip-back;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-fill-mode: both;
+}
+
+
+@-webkit-keyframes coverflip-front {
+	from
 	{
-		-webkit-transform: scale(1.00) rotateY(0deg);
+		-webkit-transform: scale(1) rotateY(0deg);
 		-webkit-transform-origin: 50% 50%;
 	}
 	
-	100%
+	49%
 	{
-		-webkit-transform: scale(1.20) rotateY(180deg);
+		opacity: 1;
+	}
+
+	50%
+	{
+		opacity: .5;
+	}
+	
+	to
+	{
+		-webkit-transform: scale(1.2) rotateY(180deg);
 		-webkit-transform-origin: 50% 50%;
+		
+		opacity: .5;
+	}
+}
+
+@-webkit-keyframes coverflip-back {
+	from
+	{
+		-webkit-transform: scale(.8) rotateY(180deg);
+		-webkit-transform-origin: 50% 50%;
+		
+		opacity: 0;
+
+	}
+	
+	50%
+	{
+		opacity: 0;
+	}
+	
+	51%
+	{
+		opacity: 1;
+	}
+		
+	to
+	{
+		-webkit-transform: scale(1) rotateY(0deg);
+		-webkit-transform-origin: 50% 50%;
+		
+		opacity: 1;
 	}
 }
