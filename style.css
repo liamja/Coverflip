@@ -13,6 +13,7 @@ html, body, div {
 	
 	-webkit-transition: all 1s ease-in-out;
 
+
 }
 
 .record .front {
@@ -28,6 +29,10 @@ html, body, div {
 	opacity: 1;
 	
 	-webkit-animation-name: coverflip-front;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-direction: normal;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
 
 }
 
@@ -42,6 +47,10 @@ html, body, div {
 	opacity: 0;
 	
 	-webkit-animation-name: coverflip-back;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-direction: normal;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
 
 }
 
@@ -50,7 +59,6 @@ html, body, div {
 	-webkit-animation-duration: 1s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-timing-function: ease-in-out;
-	-webkit-animation-fill-mode: both;
 }
 
 .record:hover .back {
@@ -58,12 +66,11 @@ html, body, div {
 	-webkit-animation-duration: 1s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-timing-function: ease-in-out;
-	-webkit-animation-fill-mode: both;
 }
 
 
 @-webkit-keyframes coverflip-front {
-	from
+	0%
 	{
 		-webkit-transform: scale(1) rotateY(0deg);
 		-webkit-transform-origin: 50% 50%;
@@ -79,7 +86,7 @@ html, body, div {
 		opacity: .5;
 	}
 	
-	to
+	100%
 	{
 		-webkit-transform: scale(1.2) rotateY(180deg);
 		-webkit-transform-origin: 50% 50%;
@@ -89,7 +96,7 @@ html, body, div {
 }
 
 @-webkit-keyframes coverflip-back {
-	from
+	0%
 	{
 		-webkit-transform: scale(.8) rotateY(180deg);
 		-webkit-transform-origin: 50% 50%;
@@ -108,7 +115,7 @@ html, body, div {
 		opacity: 1;
 	}
 		
-	to
+	100%
 	{
 		-webkit-transform: scale(1) rotateY(0deg);
 		-webkit-transform-origin: 50% 50%;
