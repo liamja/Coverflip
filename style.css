@@ -10,10 +10,6 @@ html, body, div {
 	width: 300px;
 	height: 300px;
 	margin: 50px auto 0;
-	
-	-webkit-transition: all 1s ease-in-out;
-
-
 }
 
 .record .front {
@@ -32,8 +28,10 @@ html, body, div {
 	-webkit-animation-duration: 1s;
 	-webkit-animation-direction: normal;
 	-webkit-animation-timing-function: ease-in-out;
-	-webkit-transition: all 1s ease-in-out;
-
+	
+	-webkit-animation-fill-mode: none;
+	-webkit-animation-iteration-count: 2;
+	-webkit-animation-delay: -1s;
 }
 
 .record .back {	
@@ -50,8 +48,10 @@ html, body, div {
 	-webkit-animation-duration: 1s;
 	-webkit-animation-direction: normal;
 	-webkit-animation-timing-function: ease-in-out;
-	-webkit-transition: all 1s ease-in-out;
-
+	
+	-webkit-animation-fill-mode: none;
+	-webkit-animation-iteration-count: 2;
+	-webkit-animation-delay: -1s;
 }
 
 .record:hover .front {
@@ -59,6 +59,10 @@ html, body, div {
 	-webkit-animation-duration: 1s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-timing-function: ease-in-out;
+	
+	-webkit-animation-fill-mode: none;
+
+
 }
 
 .record:hover .back {
@@ -66,27 +70,29 @@ html, body, div {
 	-webkit-animation-duration: 1s;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-timing-function: ease-in-out;
+	
+	-webkit-animation-fill-mode: none;
 }
 
 
 @-webkit-keyframes coverflip-front {
-	0%
+	100%
 	{
 		-webkit-transform: scale(1) rotateY(0deg);
 		-webkit-transform-origin: 50% 50%;
 	}
 	
-	49%
+	50%
 	{
 		opacity: 1;
 	}
 
-	50%
+	49%
 	{
 		opacity: .5;
 	}
 	
-	100%
+	0%
 	{
 		-webkit-transform: scale(1.2) rotateY(180deg);
 		-webkit-transform-origin: 50% 50%;
@@ -96,7 +102,7 @@ html, body, div {
 }
 
 @-webkit-keyframes coverflip-back {
-	0%
+	100%
 	{
 		-webkit-transform: scale(.8) rotateY(180deg);
 		-webkit-transform-origin: 50% 50%;
@@ -105,17 +111,17 @@ html, body, div {
 
 	}
 	
-	50%
+	51%
 	{
 		opacity: 0;
 	}
 	
-	51%
+	50%
 	{
 		opacity: 1;
 	}
 		
-	100%
+	0%
 	{
 		-webkit-transform: scale(1) rotateY(0deg);
 		-webkit-transform-origin: 50% 50%;
