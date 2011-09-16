@@ -1,4 +1,4 @@
-html, body, div {
+html, body, header, h2, h3, div, span, ol, li {
 	padding: 0;
 	margin: 0;
 	border: 0;
@@ -47,7 +47,7 @@ body {
 	width: 300px;
 	height: 300px;
 	
-	border: 2px solid #fff;
+	border: 1px solid #fff;
 	box-sizing: border-box;
 	
 	opacity: 1;
@@ -62,6 +62,136 @@ body {
 	-webkit-animation-delay: -1s;
 	*/
 }
+
+.record .back header {
+	
+	height: 40px;
+	
+	background: rgb(123,177,225);
+
+	background:
+		-moz-linear-gradient(top,
+			rgba(123,177,225,1) 0%,
+			rgba(99,161,219,1) 50%,
+			rgba(75,144,217,1) 51%,
+			rgba(53,108,197,1) 100%
+		);
+
+	background:
+
+		-webkit-gradient(linear, left top, left bottom,
+			color-stop(0%,rgba(123,177,225,1)),
+			color-stop(50%,rgba(99,161,219,1)),
+			color-stop(51%,rgba(75,144,217,1)),
+			color-stop(100%,rgba(53,108,197,1))
+		);
+
+	background:
+		-webkit-linear-gradient(top,
+			rgba(123,177,225,1) 0%,
+			rgba(99,161,219,1) 50%,
+			rgba(75,144,217,1) 51%,
+			rgba(53,108,197,1) 100%
+		);
+
+	background:
+		-o-linear-gradient(top,
+			rgba(123,177,225,1) 0%,
+			rgba(99,161,219,1) 50%,
+			rgba(75,144,217,1) 51%,
+			rgba(53,108,197,1) 100%
+		);
+
+	background:
+		-ms-linear-gradient(top,
+			rgba(123,177,225,1) 0%,
+			rgba(99,161,219,1) 50%,
+			rgba(75,144,217,1) 51%,
+			rgba(53,108,197,1) 100%
+		);
+
+	filter:
+		progid:DXImageTransform.Microsoft.gradient(
+			startColorstr='#7bb1e1',
+			endColorstr='#356cc5',
+			GradientType=0
+		);
+
+	background:
+		linear-gradient(top,
+			rgba(123,177,225,1) 0%,
+			rgba(99,161,219,1) 50%,
+			rgba(75,144,217,1) 51%,
+			rgba(53,108,197,1) 100%
+		);
+}
+
+.record .back header {
+	padding-left: 5px;
+}
+
+.record .back header h2 {
+	line-height: 20px;
+	font-size: 14px;
+}
+
+.record .back header h3 {
+	font-size: 20px;
+	line-height: 14px;
+}
+
+.record .back header img {
+	width: 40px;
+	height: 40px;
+	float: right;
+}
+
+.record .back ol {
+	height: 260px;
+	overflow: auto;
+	font-size: 14px;
+	list-style-type: none;
+	counter-reset: track;
+} 
+
+.record .back ol li:before {
+	counter-increment: track;
+	content: counter(track);
+	padding: 5px 10px 5px 0;
+	border-right: 1px solid #292929;
+	margin-right: 5px;
+}
+
+.record .back li {
+	background: #000;
+	border-bottom: 1px solid #292929;
+	padding: 0 5px;
+	white-space: nowrap;
+	line-height: 26px;
+}
+
+.record .back li span {
+	display: inline-block;
+	
+}
+
+.record .back ol li .track-name {
+	
+}
+
+.record .back ol li .track-time {
+	float: right;
+	border-left: 1px solid #292929;
+	margin: 0 0 0 10px;
+	padding: 0 5px 0 15px;
+	box-sizing: border-box; 
+	text-align: right;
+}
+
+.record .back li:nth-child(odd) {
+	background: #191919;
+}
+
 /*
 .record:hover .front {
 	-webkit-animation-name: coverflip-front;
@@ -85,24 +215,20 @@ body {
 */
 
 @-webkit-keyframes coverflip-front {
-	100%
-	{
+	100% {
 		-webkit-transform: scale(1) rotateY(0deg);
 		-webkit-transform-origin: 50% 50%;
 	}
 	
-	50%
-	{
+	50%	{
 		opacity: 1;
 	}
 
-	49%
-	{
+	49%	{
 		opacity: .5;
 	}
 	
-	0%
-	{
+	0% {
 		-webkit-transform: scale(1.2) rotateY(180deg);
 		-webkit-transform-origin: 50% 50%;
 		
@@ -111,8 +237,7 @@ body {
 }
 
 @-webkit-keyframes coverflip-back {
-	100%
-	{
+	100% {
 		-webkit-transform: scale(.8) rotateY(180deg);
 		-webkit-transform-origin: 50% 50%;
 		
@@ -120,18 +245,15 @@ body {
 
 	}
 	
-	51%
-	{
+	51%	{
 		opacity: 0;
 	}
 	
-	50%
-	{
+	50%	{
 		opacity: 1;
 	}
 		
-	0%
-	{
+	0% {
 		-webkit-transform: scale(1) rotateY(0deg);
 		-webkit-transform-origin: 50% 50%;
 		
