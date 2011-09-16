@@ -2,7 +2,13 @@ html, body, div {
 	padding: 0;
 	margin: 0;
 	border: 0;
-	font-family: Arial, sans-serif;
+}
+
+body {
+	background: #000;
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	color: #fff;
 }
 
 .record {
@@ -13,8 +19,6 @@ html, body, div {
 }
 
 .record .front {
-	visibility: visible;
-	
 	width: 300px;
 	height: 300px;
 
@@ -22,8 +26,8 @@ html, body, div {
 	top: 0;
 	left: 0;
 	
-	opacity: 1;
-	
+	opacity: 0;
+	/*
 	-webkit-animation-name: coverflip-front;
 	-webkit-animation-duration: 1s;
 	-webkit-animation-direction: normal;
@@ -32,18 +36,22 @@ html, body, div {
 	-webkit-animation-fill-mode: none;
 	-webkit-animation-iteration-count: 2;
 	-webkit-animation-delay: -1s;
+	 */
 }
 
 .record .back {	
-	width: 300px;
-	height: 300px;
-	
 	position: absolute;
 	top: 0;
 	left: 0;
 	
-	opacity: 0;
+	width: 300px;
+	height: 300px;
 	
+	border: 2px solid #fff;
+	box-sizing: border-box;
+	
+	opacity: 1;
+	/*
 	-webkit-animation-name: coverflip-back;
 	-webkit-animation-duration: 1s;
 	-webkit-animation-direction: normal;
@@ -52,8 +60,9 @@ html, body, div {
 	-webkit-animation-fill-mode: none;
 	-webkit-animation-iteration-count: 2;
 	-webkit-animation-delay: -1s;
+	*/
 }
-
+/*
 .record:hover .front {
 	-webkit-animation-name: coverflip-front;
 	-webkit-animation-duration: 1s;
@@ -73,7 +82,7 @@ html, body, div {
 	
 	-webkit-animation-fill-mode: none;
 }
-
+*/
 
 @-webkit-keyframes coverflip-front {
 	100%
