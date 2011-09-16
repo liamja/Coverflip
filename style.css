@@ -46,9 +46,10 @@ body {
 .record .back header {
 	
 	height: 40px;
-	
-	background: rgb(123,177,225);
+	padding-left: 5px;
 
+	background: rgb(123,177,225);
+	
 	background:
 		-moz-linear-gradient(top,
 			rgba(123,177,225,1) 0%,
@@ -56,7 +57,7 @@ body {
 			rgba(75,144,217,1) 51%,
 			rgba(53,108,197,1) 100%
 		);
-
+	
 	background:
 
 		-webkit-gradient(linear, left top, left bottom,
@@ -104,10 +105,6 @@ body {
 			rgba(75,144,217,1) 51%,
 			rgba(53,108,197,1) 100%
 		);
-}
-
-.record .back header {
-	padding-left: 5px;
 }
 
 .record .back header h2 {
