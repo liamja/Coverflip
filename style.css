@@ -5,7 +5,7 @@ html, body, header, h2, h3, div, span, ol, li {
 }
 
 body {
-	background: #000;
+	background: #0A0A0A;
 	font-family: Helvetica, Arial, sans-serif;
 	font-weight: bold;
 	color: #fff;
@@ -16,31 +16,34 @@ body {
 	width: 300px;
 	height: 300px;
 	margin: 50px auto 0;
+	
+}
+
+.record .front,
+.record .back {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 300px;
+	height: 300px;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: all 0.5s ease-in-out;
+	-webkit-backface-visibility: hidden;
 }
 
 .record .front {
-	width: 300px;
-	height: 300px;
-
-	position: absolute;
-	top: 0;
-	left: 0;
-	
-	opacity: 0;
 }
 
 .record .back {	
-	position: absolute;
-	top: 0;
-	left: 0;
-	
-	width: 300px;
-	height: 300px;
-	
 	border: 1px solid #fff;
 	box-sizing: border-box;
 	
-	opacity: 1;
+	-webkit-transform: rotateY(180deg);
+}
+
+.record:hover .front,
+.record:hover .back {
+	-webkit-transform: rotateY(180deg) scale(1.2);
 }
 
 .record .back header {
@@ -149,7 +152,6 @@ body {
 
 .record .back li span {
 	display: inline-block;
-	
 }
 
 .record .back ol li .track-name {
@@ -167,51 +169,4 @@ body {
 
 .record .back li:nth-child(odd) {
 	background: #191919;
-}
-
-@-webkit-keyframes coverflip-front {
-	100% {
-		-webkit-transform: scale(1) rotateY(0deg);
-		-webkit-transform-origin: 50% 50%;
-	}
-	
-	50%	{
-		opacity: 1;
-	}
-
-	49%	{
-		opacity: .5;
-	}
-	
-	0% {
-		-webkit-transform: scale(1.2) rotateY(180deg);
-		-webkit-transform-origin: 50% 50%;
-		
-		opacity: .5;
-	}
-}
-
-@-webkit-keyframes coverflip-back {
-	100% {
-		-webkit-transform: scale(.8) rotateY(180deg);
-		-webkit-transform-origin: 50% 50%;
-		
-		opacity: 0;
-
-	}
-	
-	51%	{
-		opacity: 0;
-	}
-	
-	50%	{
-		opacity: 1;
-	}
-		
-	0% {
-		-webkit-transform: scale(1) rotateY(0deg);
-		-webkit-transform-origin: 50% 50%;
-		
-		opacity: 1;
-	}
 }
