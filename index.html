@@ -13,10 +13,11 @@
 
 		<!-- Le styles -->
 		<link href="bootstrap.min.css" rel="stylesheet">
+		<link href="prettify.css" type="text/css" rel="stylesheet" />
 		<link href="style.css" rel="stylesheet">
 	</head>
 
-	<body>
+	<body onload="prettyPrint()">
 
 		<div class="container">
 
@@ -24,32 +25,6 @@
 			<div class="hero-unit">
 				<h1>Coverflip</h1>
 				<p>Coverflip is an HTML5 / CSS3 clone of the iOS Coverflow interface.</p>
-				
-				<div class="record">
-					<img class="front" src="cover.jpg" />
-					<div class="back">
-						<header>
-							<img src="cover.jpg" />
-							<h2>Kalix</h2>
-							<h3>Excited</h3>
-						</header>
-						<ol>
-							<li>
-								<span class="track-name">Excited</span>
-								<span class="track-time">3:10</span>
-							</li>
-							<li>
-								<span class="track-name">Excited (Original Mix)</span>
-								<span class="track-time">5:45</span>
-							</li>
-							<li>
-								<span class="track-name">Excited (Fancy Radio Edit)</span>
-								<span class="track-time">1:53</span>
-							</li>
-						</ol>
-					</div> <!-- end .back -->
-				</div> <!-- end .record -->
-				
 				<pre>$ git clone git://github.com/liamja/Coverflip</pre>
 				<p>
 					<a class="btn primary large" href="//github.com/liamja/Coverflip/zipball/master">Download zip</a>
@@ -57,11 +32,75 @@
 				</p>
 			</div>
 			
+			<h2>Demo</h2>
+
+			<div class="row">
+
+				<div class="span10">
+					<pre class="prettyprint">
+&lt;div class=&quot;record&quot;&gt;
+  &lt;img class=&quot;front&quot; src=&quot;cover.jpg&quot; /&gt;
+  &lt;div class=&quot;back&quot;&gt;
+    &lt;header&gt;
+      &lt;img src=&quot;cover.jpg&quot; /&gt;
+      &lt;h2&gt;Kalix&lt;/h2&gt;
+      &lt;h3&gt;Excited&lt;/h3&gt;
+    &lt;/header&gt;
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;span class=&quot;track-name&quot;&gt;Excited&lt;/span&gt;
+        &lt;span class=&quot;track-time&quot;&gt;3:10&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;span class=&quot;track-name&quot;&gt;Excited (Original Mix)&lt;/span&gt;
+        &lt;span class=&quot;track-time&quot;&gt;5:45&lt;/span&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;span class=&quot;track-name&quot;&gt;Excited (Fancy Radio Edit)&lt;/span&gt;
+        &lt;span class=&quot;track-time&quot;&gt;1:53&lt;/span&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/div&gt; &lt;!-- end .back --&gt;
+&lt;/div&gt; &lt;!-- end .record --&gt;
+					</pre>
+				</div>
+				
+				<div class="span6">
+					<div class="record">
+						<img class="front" src="cover.jpg" />
+						<div class="back">
+							<header>
+								<img src="cover.jpg" />
+								<h2>Kalix</h2>
+								<h3>Excited</h3>
+							</header>
+							<ol>
+								<li>
+									<span class="track-name">Excited</span>
+									<span class="track-time">3:10</span>
+								</li>
+								<li>
+									<span class="track-name">Excited (Original Mix)</span>
+									<span class="track-time">5:45</span>
+								</li>
+								<li>
+									<span class="track-name">Excited (Fancy Radio Edit)</span>
+									<span class="track-time">1:53</span>
+								</li>
+							</ol>
+						</div> <!-- end .back -->
+					</div> <!-- end .record -->
+				</div>
+
+			</div>
+			
 			<footer>
 				<p>&copy; Liam Anderson 2011</p>
 			</footer>
 
 		</div> <!-- end .container -->
+
+		<script type="text/javascript" src="prettify.js"></script>
 
 	</body>
 </html>
