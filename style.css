@@ -1,0 +1,132 @@
+body {
+	padding-top: 60px;
+	}
+			
+.record {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+    }
+
+.record .front, .record .back {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: #000;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-backface-visibility: hidden
+    }
+
+.record .back {
+    border: 1px solid #fff;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transform: rotatey(180deg);
+    -moz-transform: rotatey(180deg);
+    -o-transform: rotatey(180deg);
+    -ms-transform: rotatey(180deg);
+    transform: rotatey(180deg)
+    }
+
+.record:hover .front {
+    -webkit-transform: rotatey(180deg);
+    -moz-transform: rotatey(180deg);
+    -o-transform: rotatey(180deg);
+    -ms-transform: rotatey(180deg);
+    transform: rotatey(180deg)
+    }
+
+.record:hover .back {
+    -webkit-transform: rotatey(360deg);
+    -moz-transform: rotatey(360deg);
+    -o-transform: rotatey(360deg);
+    -ms-transform: rotatey(360deg);
+    transform: rotatey(360deg)
+    }
+
+.record .back header {
+    height: 40px;
+    padding-left: 5px;
+    background: rgb(123, 177, 225);
+    background: -moz-linear-gradient(top, rgba(123, 177, 225, 1)0%, rgba(99, 161, 219, 1)50%, rgba(75, 144, 217, 1)51%, rgba(53, 108, 197, 1)100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(123, 177, 225, 1)), color-stop(50%, rgba(99, 161, 219, 1)), color-stop(51%, rgba(75, 144, 217, 1)), color-stop(100%, rgba(53, 108, 197, 1)));
+    background: -webkit-linear-gradient(top, rgba(123, 177, 225, 1)0%, rgba(99, 161, 219, 1)50%, rgba(75, 144, 217, 1)51%, rgba(53, 108, 197, 1)100%);
+    background: -o-linear-gradient(top, rgba(123, 177, 225, 1)0%, rgba(99, 161, 219, 1)50%, rgba(75, 144, 217, 1)51%, rgba(53, 108, 197, 1)100%);
+    background: -ms-linear-gradient(top, rgba(123, 177, 225, 1)0%, rgba(99, 161, 219, 1)50%, rgba(75, 144, 217, 1)51%, rgba(53, 108, 197, 1)100%);
+    background: linear-gradient(top, rgba(123, 177, 225, 1)0%, rgba(99, 161, 219, 1)50%, rgba(75, 144, 217, 1)51%, rgba(53, 108, 197, 1)100%)
+    }
+
+.record .back header h2 {
+	font-family: Helvetica, Arial, sans-serif;
+	color: #fff;
+    line-height: 20px;
+    font-size: 14px
+    }
+
+.record .back header h3 {
+	font-family: Helvetica, Arial, sans-serif;
+	color: #fff;
+    font-size: 20px;
+    line-height: 14px
+    }
+
+.record .back header img {
+    width: 40px;
+    height: 40px;
+    float: right
+    }
+
+.record .back ol {
+    height: 260px;
+    overflow: auto;
+    font-size: 14px;
+    list-style-type: none;
+    counter-reset: track;
+	margin: 0;
+	padding: 0;
+    }
+
+.record .back ol li:before {
+    counter-increment: track;
+    content: counter(track);
+    padding: 5px 10px 5px 0;
+    border-right: 1px solid #292929;
+    margin-right: 5px
+    }
+
+.record .back li {
+	font-family: Helvetica, Arial, sans-serif;
+	font-weight: bold;
+	color: #fff;
+    background: #000;
+    border-bottom: 1px solid #292929;
+    padding: 0 5px;
+    white-space: nowrap;
+    line-height: 26px
+    }
+
+.record .back li span {
+    display: inline-block
+    }
+
+.record .back ol li .track-time {
+    float: right;
+    border-left: 1px solid #292929;
+    margin: 0 0 0 10px;
+    padding: 0 5px 0 15px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: right
+    }
+
+.record .back li:nth-child(odd) {
+    background: #191919
+    }
